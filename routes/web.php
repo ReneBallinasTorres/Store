@@ -43,15 +43,15 @@ Route::get('/register', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
 
 /* Rutas de Información (Inf) */
-Route::get('/about', function () {
+Route::get('public/about', function () {
     return Inertia::render('Inf/About');
 });
 
-Route::get('/User', function () {
+Route::get('public/User', function () {
     return Inertia::render('User/UserType');
 });
 
-Route::get('/contact', function () {
+Route::get('public/contact', function () {
     return Inertia::render('Inf/Contact');
 });
 
@@ -104,7 +104,6 @@ Route::get('/search', function () {
 })->name('products.search');
 
 Route::get('/products/category/{category}', function ($category) {
-    // Usar auth()->check() o Auth::check()
     if (!Auth::check()) {
         return redirect('/login');
     }
