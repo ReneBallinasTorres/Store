@@ -34,7 +34,7 @@ export default function Home() {
 
                 <div className="text-center mt-6">
                     <a
-                        href="public/User"
+                        href="/User"
                         className="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
                     >
                         Inicia sesión para ver más productos
